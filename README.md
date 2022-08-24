@@ -29,7 +29,7 @@
 | information      | text       | null: false                    |
 | quality_id       | integer    | null: false                    |
 | from_id          | integer    | null: false                    |
-| when             | integer    | null: false                    |
+| when_id          | integer    | null: false                    |
 | user             | references | null: false, foreign_key: true |
 
 ### Association
@@ -43,7 +43,6 @@
 | ---------- | ---------- | ------------------------------ |
 | item       | references | null: false, foreign_key: true |
 | user       | references | null: false, foreign_key: true |
-| adress     | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -55,7 +54,7 @@
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | -------------------------------|
-| zip                | integer    | null: false                    |
+| zip                | string     | null: false                    |
 | prefecture_id      | integer    | null: false                    |
 | city               | string     | null: false                    |
 | adress1            | string     | null: false                    |

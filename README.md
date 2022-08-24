@@ -28,8 +28,8 @@
 | post_price_id    | integer    | null: false                    |
 | information      | text       | null: false                    |
 | quality_id       | integer    | null: false                    |
-| from_id          | integer    | null: false                    |
-| when_id          | integer    | null: false                    |
+| prefecture_id    | integer    | null: false                    |
+| shipment_day_id  | integer    | null: false                    |
 | user             | references | null: false, foreign_key: true |
 
 ### Association
@@ -59,7 +59,7 @@
 | city               | string     | null: false                    |
 | adress1            | string     | null: false                    |
 | adress2            | string     |                                |
-| telephone          | string     |                                |
+| telephone          | string     | null: false                    |
 | order              | references | null: false, foreign_key: true |
 
 ### Association

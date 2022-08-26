@@ -48,17 +48,17 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one    :adress
+- has_one    :address
 
-## adresses テーブル
+## addresses テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | -------------------------------|
 | zip                | string     | null: false                    |
 | prefecture_id      | integer    | null: false                    |
 | city               | string     | null: false                    |
-| adress1            | string     | null: false                    |
-| adress2            | string     |                                |
+| address1            | string     | null: false                    |
+| address2            | string     |                                |
 | telephone          | string     | null: false                    |
 | order              | references | null: false, foreign_key: true |
 

@@ -10,7 +10,7 @@ FactoryBot.define do
     first_name            { person.first.kanji }
     last_name             { person.last.kanji }
     kana_first_name       { person.first.katakana }
-    kana_last_name       { person.last.katakana }
+    kana_last_name        { person.last.katakana }
     birthday              { Faker::Date.birthday }
   end
 end

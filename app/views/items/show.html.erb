@@ -25,9 +25,9 @@
 
     
 <% if user_signed_in? && current_user.id == @item.user_id %>
-    <%= link_to "商品の編集", edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+    <%= link_to "商品の編集", '編集', method: :get, class: "item-red-btn" %>
     <p class="or-text">or</p>
-    <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+    <%= link_to "削除", '削除', method: :delete, class:"item-destroy" %>
 
     <% elsif user_signed_in? && current_user.id  != @item.user_id %>
 
@@ -36,7 +36,7 @@
 <% end %>
 
     <div class="item-explain-box">
-      <span><%= "商品説明" %></span>
+      <span><%= @item.information %></span>
     </div>
     <table class="detail-table">
       <tbody>
@@ -102,7 +102,7 @@
     </a>
   </div>
   <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
-  <a href="#" class="another-item"><%= "商品のカテゴリー名" %>をもっと見る</a>
+  <a href="#" class="another-item"><%= @item.category.name  %>をもっと見る</a>
   <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
 </div>
 

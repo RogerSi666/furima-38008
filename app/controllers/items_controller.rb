@@ -50,11 +50,12 @@ class ItemsController < ApplicationController
   def redirect
     if current_user.id != @item.user.id
       redirect_to action: :index 
+    else
     end
+  end
 
   def item_params
     params.require(:item).permit(:title, :image, :information, :category_id, :quality_id, :prefecture_id, :shipment_day_id,
                                  :post_price_id, :price).merge(user_id: current_user.id)
   end
-end
 end

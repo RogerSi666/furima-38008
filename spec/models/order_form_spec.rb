@@ -68,7 +68,7 @@ RSpec.describe OrderForm, type: :model do
         expect(@order_form.errors.full_messages).to include('Zip is invalid. Include hyphen(-)')
       end
       it '都道府県が「---」だと保存できないこと' do
-        @order_form.prefecture_id = 0
+        @order_form.prefecture_id = 1
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include("Prefecture can't be blank")
       end

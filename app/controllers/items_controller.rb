@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
   end
 
   def redirect
-    unless current_user.id == @item.user.id
+    if current_user.id != @item.user.id
       redirect_to action: :index 
     end
 

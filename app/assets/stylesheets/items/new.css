@@ -227,3 +227,11 @@
 .inc {
   font-size: 13px;
 }
+
+.preview-image {
+  height: 40vh;
+  width: 50vw;
+  min-height: 500px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}

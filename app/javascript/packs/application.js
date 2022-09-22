@@ -10,6 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../price")
 require("../card")
+require('../preview')  // 追記する
 
 
 

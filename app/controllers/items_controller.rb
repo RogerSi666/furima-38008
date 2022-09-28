@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :redirect, only: [:destroy, :edit]
 
   def index
-    @items = Item.all.order('created_at DESC')
+    @items = Item.includes(:user).all.order('created_at DESC')
   end
 
   def new

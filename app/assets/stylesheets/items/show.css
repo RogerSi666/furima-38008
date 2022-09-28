@@ -149,6 +149,7 @@
 }
 
 .comment-text {
+  
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -204,4 +205,8 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 23px;
+}
+.remove-submit-btn-style {
+  background: none;
+  border: none;
 }

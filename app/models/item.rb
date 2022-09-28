@@ -26,4 +26,12 @@ class Item < ApplicationRecord
   belongs_to :shipment_day
   belongs_to :prefecture
   belongs_to :post_price
+
+  def self.search(search)
+    if search != ""
+      Item.where('title LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end

@@ -86,7 +86,8 @@
   <%# /商品の概要 %>
 
   <div class="comment-box">
-      <%= form_with(model: [@item, @comment], local: true) do |form| %>
+  <% if user_signed_in? %>
+      <%= form_with model: [@item, @comment], id: "comment-form" do |form| %>
  <%= form.text_area :text, class: "comment-text" %>
       <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
@@ -98,16 +99,15 @@
         <%= form.submit "コメントする", class: 'remove-submit-btn-style' %>
       </button>
             <% end %>
-
-      <div class="comments">
-      <% @comments.each do |comment| %>
-        <p>
-          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <% end %>
+<div id="comments">
+      <% @item.comments.each do |comment| %>
+        <p><div class="comment">
+          <p class="user-info"><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</p>
           <%= comment.text %>
-        </p>
+        </p></div>
       <% end %>
-    </div>
-
+</div>
     </form>
   </div>
   <div class="links">

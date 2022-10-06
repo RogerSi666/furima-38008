@@ -14,11 +14,11 @@ class Item < ApplicationRecord
 
     validates :image
 
-    validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :quality_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :shipment_day_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :post_price_id, numericality: { other_than: 1, message: "can't be blank" }
+    validates :category_id, numericality: { other_than: 1}
+    validates :quality_id, numericality: { other_than: 1}
+    validates :prefecture_id, numericality: { other_than: 1}
+    validates :shipment_day_id, numericality: { other_than: 1}
+    validates :post_price_id, numericality: { other_than: 1}
   end
 
   belongs_to :category

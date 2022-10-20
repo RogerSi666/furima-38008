@@ -1,0 +1,15 @@
+.search-field {
+  font-size: 18px;
+margin-top: 20px;
+justify-content: center;
+padding-left: 20vh;
+
+}
+
+.search-but {
+  
+  justify-content: center;
+margin-left: 30vh;
+margin-bottom: 5px;
+margin-top: 5px;
+}
